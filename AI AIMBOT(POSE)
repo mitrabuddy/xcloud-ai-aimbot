@@ -30,13 +30,13 @@
                 minPoseScore: 0.25 // Minimum confidence score for a detected pose (0.0 to 1.0, lower = more detections)
             },
             keypointConfidence: 0.20, // Minimum confidence for individual keypoints (0.0 to 1.0, lower = more points detected)
-            maxDetections: 5, // Maximum number of players to detect (1 to 10, higher = more CPU usage)
+            maxDetections: 1, // Maximum number of players to detect (1 to 10, higher = more CPU usage)
             processingInterval: 30, // Minimum time (ms) between detection runs (10 to 100, lower = faster but more CPU)
-            skipFrames: 1, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
+            skipFrames: 0, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
             dynamicFrameSkipping: {
                 enabled: true, // Enable dynamic frame-skipping (true/false)
                 minSkipFrames: 0, // Minimum frames to skip (0 to 5)
-                maxSkipFrames: 3, // Maximum frames to skip (0 to 5)
+                maxSkipFrames: 0, // Maximum frames to skip (0 to 5)
                 targetFPS: 30, // Target FPS for dynamic adjustment (20 to 60)
                 highDetectionTimeThreshold: 20, // Detection time (ms) above which skipFrames increases (10 to 50)
                 lowDetectionTimeThreshold: 10, // Detection time (ms) below which skipFrames decreases (5 to 30)
@@ -57,7 +57,7 @@
         game: {
             videoSelector: 'video[aria-label="Game Stream for unknown title"]', // HTML selector for game video (do not change unless xCloud changes)
             containerSelector: '#game-stream', // HTML selector for game container (do not change unless xCloud changes)
-            recoilCompensation: true, // Enable manual recoil compensation (true/false)
+            recoilCompensation: false, // Enable manual recoil compensation (true/false)
             recoilLevel: 1, // Recoil strength level (1 to 5, higher = stronger compensation)
             // Example: Set recoilLevel to 3 for weapons with moderate recoil
             recoilPatterns: {
@@ -122,7 +122,7 @@
                 radius: 3 // Keypoint size (pixels, 1 to 10)
             },
             skeleton: {
-                enabled: false, // Show skeleton lines on targets (true/false)
+                enabled: true, // Show skeleton lines on targets (true/false)
                 color: 'rgba(255, 0, 255, 0.9)', // Skeleton color
                 lineWidth: 2 // Skeleton line thickness (pixels, 1 to 5)
             },
