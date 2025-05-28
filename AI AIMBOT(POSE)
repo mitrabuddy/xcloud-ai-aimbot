@@ -32,11 +32,11 @@
             keypointConfidence: 0.20, // Minimum confidence for individual keypoints (0.0 to 1.0, lower = more points detected)
             maxDetections: 5, // Maximum number of players to detect (1 to 10, higher = more CPU usage)
             processingInterval: 30, // Minimum time (ms) between detection runs (10 to 100, lower = faster but more CPU)
-            skipFrames: 1, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
+            skipFrames: 5, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
             dynamicFrameSkipping: {
                 enabled: true, // Enable dynamic frame-skipping (true/false)
-                minSkipFrames: 0, // Minimum frames to skip (0 to 5)
-                maxSkipFrames: 3, // Maximum frames to skip (0 to 5)
+                minSkipFrames: 5, // Minimum frames to skip (0 to 5)
+                maxSkipFrames: 5, // Maximum frames to skip (0 to 5)
                 targetFPS: 30, // Target FPS for dynamic adjustment (20 to 60)
                 highDetectionTimeThreshold: 20, // Detection time (ms) above which skipFrames increases (10 to 50)
                 lowDetectionTimeThreshold: 10, // Detection time (ms) below which skipFrames decreases (5 to 30)
@@ -95,7 +95,7 @@
             targetSwitchCooldown: 250, // Time (ms) before switching targets (100 to 1000, higher = less frequent switches)
             triggerThreshold: 0.7, // Auto-shoot distance threshold (% of fovRadius, 0.0 to 1.0, lower = closer range)
             smoothing: {
-                enabled: false, // Smooth aim movement (true/false)
+                enabled: true, // Smooth aim movement (true/false)
                 amount: 0.15, // Smoothing strength (0.0 to 1.0, higher = smoother but slower)
                 extrapolation: false // Predict target movement (true/false, experimental)
             },
