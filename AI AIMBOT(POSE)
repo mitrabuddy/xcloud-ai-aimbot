@@ -32,16 +32,16 @@
             keypointConfidence: 0.20, // Minimum confidence for individual keypoints (0.0 to 1.0, lower = more points detected)
             maxDetections: 5, // Maximum number of players to detect (1 to 10, higher = more CPU usage)
             processingInterval: 30, // Minimum time (ms) between detection runs (10 to 100, lower = faster but more CPU)
-            skipFrames: 1, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
+            skipFrames: 10, // Base number of frames to skip between detections (0 to 5, 0 = no skip, higher = less CPU usage)
             dynamicFrameSkipping: {
                 enabled: true, // Enable dynamic frame-skipping (true/false)
-                minSkipFrames: 0, // Minimum frames to skip (0 to 5)
-                maxSkipFrames: 3, // Maximum frames to skip (0 to 5)
-                targetFPS: 30, // Target FPS for dynamic adjustment (20 to 60)
+                minSkipFrames: 10, // Minimum frames to skip (0 to 5)
+                maxSkipFrames: 10, // Maximum frames to skip (0 to 5)
+                targetFPS: 60, // Target FPS for dynamic adjustment (20 to 60)
                 highDetectionTimeThreshold: 20, // Detection time (ms) above which skipFrames increases (10 to 50)
                 lowDetectionTimeThreshold: 10, // Detection time (ms) below which skipFrames decreases (5 to 30)
-                fpsThresholdLow: 20, // FPS below which skipFrames increases (10 to 50)
-                fpsThresholdHigh: 40 // FPS above which skipFrames decreases (30 to 60)
+                fpsThresholdLow: 50, // FPS below which skipFrames increases (10 to 50)
+                fpsThresholdHigh: 60 // FPS above which skipFrames decreases (30 to 60)
             },
             useWebGL2: true, // Use WebGL2 for faster processing (true/false, false may improve compatibility)
             ignoreSelfRegion: {
