@@ -2,7 +2,7 @@
 // @name         Fortnite xCloud Precision Aimbot (MoveNet) - ud
 // @description  AI-powered aimbot for Fortnite on xCloud with MoveNet pose detection, dynamic frame-skipping, FOV-restricted detection, and instant triggerbot.
 // @author       Improved Version / Community
-// @version      4.2.21
+// @version      4.2.20
 // @match        *://*.xbox.com/play/*
 // @grant        none
 // @run-at       document-end
@@ -68,7 +68,7 @@
                 5: { vertical: 0.7, horizontal: 0.15, recoverySpeed: 0.10 }
                 // Adjust vertical/horizontal for recoil strength, recoverySpeed for how fast it resets (0.0 to 1.0)
             },
-            autoShoot: true, // Automatically shoot when crosshair is in target lock (true/false)
+            autoShoot: false, // Automatically shoot when crosshair is in target lock (true/false)
             triggerOptions: {
                 burstMode: false, // Enable burst fire mode (true/false)
                 burstCount: 3, // Number of shots per burst (1 to 10)
@@ -88,7 +88,7 @@
             // Example: Change to 'KeyQ' to use Q key for aiming
             fovRadius: 250, // Field of view radius (pixels) for target detection (100 to 1000, larger = wider range)
             instantLock: true, // Instantly lock onto target (true/false, false = smoother but slower)
-            aimPoint: "torso_center", // Target body part: "torso_center", "head", "neck", or "center"
+            aimPoint: "head", // Target body part: "torso_center", "head", "neck", or "center"
             headOffset: 0.15, // Vertical offset for head aiming (% of bounding box height, 0.0 to 1.0)
             bodyOffset: 0.4, // Vertical offset for torso/center aiming (% of bounding box height, 0.0 to 1.0)
             targetPriority: "center", // Target selection priority: "center" (screen center), "crosshair" (mouse), "distance", or "size"
