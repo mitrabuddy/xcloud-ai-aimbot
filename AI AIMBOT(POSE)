@@ -57,8 +57,8 @@
         game: {
             videoSelector: 'video[aria-label="Game Stream for unknown title"]', // HTML selector for game video (do not change unless xCloud changes)
             containerSelector: '#game-stream', // HTML selector for game container (do not change unless xCloud changes)
-            recoilCompensation: true, // Enable manual recoil compensation (true/false)
-            recoilLevel: 1, // Recoil strength level (1 to 5, higher = stronger compensation)
+            recoilCompensation: false, // Enable manual recoil compensation (true/false)
+            recoilLevel: 0, // Recoil strength level (1 to 5, higher = stronger compensation)
             // Example: Set recoilLevel to 3 for weapons with moderate recoil
             recoilPatterns: {
                 1: { vertical: 0.1, horizontal: 0.02, recoverySpeed: 0.25 },
@@ -86,7 +86,7 @@
         aim: {
             activationKey: 'KeyE', // Key to activate aimbot (e.g., 'KeyE' for E key, 'KeyQ' for Q, etc.)
             // Example: Change to 'KeyQ' to use Q key for aiming
-            fovRadius: 250, // Field of view radius (pixels) for target detection (100 to 1000, larger = wider range)
+            fovRadius: 1000, // Field of view radius (pixels) for target detection (100 to 1000, larger = wider range)
             instantLock: true, // Instantly lock onto target (true/false, false = smoother but slower)
             aimPoint: "torso_center", // Target body part: "torso_center", "head", "neck", or "center"
             headOffset: 0.15, // Vertical offset for head aiming (% of bounding box height, 0.0 to 1.0)
@@ -95,7 +95,7 @@
             targetSwitchCooldown: 250, // Time (ms) before switching targets (100 to 1000, higher = less frequent switches)
             triggerThreshold: 0.7, // Auto-shoot distance threshold (% of fovRadius, 0.0 to 1.0, lower = closer range)
             smoothing: {
-                enabled: false, // Smooth aim movement (true/false)
+                enabled: true, // Smooth aim movement (true/false)
                 amount: 0.15, // Smoothing strength (0.0 to 1.0, higher = smoother but slower)
                 extrapolation: false // Predict target movement (true/false, experimental)
             },
@@ -122,17 +122,17 @@
                 radius: 3 // Keypoint size (pixels, 1 to 10)
             },
             skeleton: {
-                enabled: false, // Show skeleton lines on targets (true/false)
+                enabled: true, // Show skeleton lines on targets (true/false)
                 color: 'rgba(255, 0, 255, 0.9)', // Skeleton color
                 lineWidth: 2 // Skeleton line thickness (pixels, 1 to 5)
             },
             targetLock: {
-                enabled: false, // Show lock-on indicator (true/false)
+                enabled: true, // Show lock-on indicator (true/false)
                 color: 'yellow', // Indicator color
                 style: 'corners' // Indicator style: 'corners', 'full', or 'crosshair'
             },
             fovCircle: {
-                enabled: true, // Show FOV circle (true/false)
+                enabled: false, // Show FOV circle (true/false)
                 color: 'rgba(255,255,255,0.3)', // Circle color
                 lineWidth: 1, // Circle thickness (pixels, 1 to 5)
                 centerOnGameScreen: true, // Center on game screen (true) or mouse (false)
